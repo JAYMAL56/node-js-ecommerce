@@ -1,0 +1,49 @@
+<h3>{{viewTitle}}</h3>
+
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Student Form</h2>
+                    <form action="/jkd" method="POST">
+                        <input type="hidden" name="_id" value="{{student._id}}">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">firstname</label>
+                                    <input class="input--style-4" type="text" name="first_name" value='{{test.firstname}}'>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">lastname</label>
+                                    <input class="input--style-4" type="text" name="last_name" value='{{test.lastname}}'>
+                                </div>
+                            </div>
+                        </div>
+                        
+                           
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email" value="{{test.email}}">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">city</label>
+                                    <input class="input--style-4" type="text" name="city" value='{{test.city}}'>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                                 <a class="btn btn--radius-2 btn--blue" href="/list"><i class="fa fa-list-alt"></i> View All</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,42 @@
+<h3><a class="btn btn--radius-2 btn--blue" href="/jkd"><i class="fa fa-plus"></i> Create New</a> student List</h3>
+
+<div class="container">
+    
+  
+
+    <div class="row">
+        <div class="panel panel-primary filterable">
+            <div class="panel-heading">
+               
+                <div class="pull-right">
+ 
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr class="filters">
+                        
+                        <th><input type="text" class="form-control" placeholder="First Name" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Last Name" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="city" disabled></th>
+                              <th><input type="text" class="form-control" placeholder="email" disabled></th>
+                    </tr>
+                </thead>
+          <tbody>
+        {{#each list}}
+        <tr>
+            
+            <td>{{this.first_name}}</td>
+             <td>{{this.last_name}}</td>
+            <td>{{this.city}}</td>
+            <td>{{this.email}}</td>
+           
+         
+            <td>
+                <a href="/jkd/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/jkd/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
